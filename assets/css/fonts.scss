@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('~assets/fonts/Gilroy/Gilroy-Medium.eot');
+  src: local('Gilroy Medium'), local('Gilroy-Medium'),
+  url('~assets/fonts/Gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+  url('~assets/fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('~assets/fonts/Gilroy/Gilroy-Light.eot');
+  src: local('Gilroy Light'), local('Gilroy-Light'),
+  url('~assets/fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+  url('~assets/fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('~assets/fonts/Gilroy/Gilroy-SemiBold.eot');
+  src: local('Gilroy SemiBold'), local('Gilroy-SemiBold'),
+  url('~assets/fonts/Gilroy/Gilroy-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/Gilroy/Gilroy-SemiBold.woff') format('woff'),
+  url('~assets/fonts/Gilroy/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
