@@ -24,17 +24,37 @@
         </div>
       </nav>
       <div class="my-auto container">
-        <div class="row">
-          <div class="col-lg-4 d-flex">
-            <h1 class="my-auto fs-64">
-              Территория современного
-              творчества
-            </h1>
-          </div>
-          <div class="ml-auto col-lg-5">
-            <img src="~assets/main/1.png" width="90%" />
-          </div>
-        </div>
+        <b-carousel
+          indicators
+          :interval="3000"
+        >
+          <b-carousel-slide>
+            <template #default>
+              <div class="col-lg-4 d-flex">
+                <h1 class="my-auto fs-64">
+                  Территория современного
+                  творчества
+                </h1>
+              </div>
+              <div class="ml-auto text-center my-auto col-lg-5">
+                <img src="~assets/main/1.png" width="90%" />
+              </div>
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide>
+            <template #default>
+              <div class="col-lg-4 d-flex">
+                <h1 class="my-auto fs-64">
+                  Территория современного
+                  творчества 2
+                </h1>
+              </div>
+              <div class="ml-auto text-center my-auto col-lg-5">
+                <img src="~assets/main/1.png" width="90%" />
+              </div>
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
       </div>
     </div>
     <div class="page about_us d-flex flex-column">
@@ -65,24 +85,21 @@
     </div>
     <div class="hot_items py-5 d-flex">
       <div class="container my-auto">
-        <div class="slide row">
-          <div class="col-lg-5">
-            <img src="~assets/about/slide_1.png" width="100%" class="slide_img" />
-          </div>
-          <div class="col-lg-5">
-            <h1>Мастеркласс по эпоксидной смоле</h1>
-            <div class="mt-3">10 марта 16:30</div>
-            <div class="mt-3 fs-18">
-              Политическое учение Монтескье, с другой стороны, формирует эмпирический марксизм. Континентально-европейский тип политической культуры, тем более в условиях социально-экономического кризиса, теоретически возможен.
-            </div>
-            <div class="mt-5">
-              <a class="btn btn-singup">Записаться</a>
-            </div>
-          </div>
-          <div class="col-lg-2 d-none d-md-block">
-            <img src="~assets/about/top_slide_icon.png" />
-          </div>
-        </div>
+        <b-carousel
+          indicators
+          controls
+        >
+          <b-carousel-slide>
+            <template #default>
+              <hot-event/>
+            </template>
+          </b-carousel-slide>
+          <b-carousel-slide>
+            <template #default>
+              <hot-event/>
+            </template>
+          </b-carousel-slide>
+        </b-carousel>
       </div>
     </div>
     <div class="pt-5 page masterclass">
@@ -112,7 +129,7 @@
           height="500"
           frameborder="0"
         ></iframe>
-        <div class="row my-5 text-center text-md-left">
+        <div class="row my-5 text-center text-lg-left">
           <div class="col-lg-2 mb-2">
             <a href="/">
               <img src="~/assets/logo_black.svg" height="40" class="d-inline-block align-top">
@@ -138,9 +155,10 @@
 
 <script>
 import VueMasonryWall from 'vue-masonry-wall'
+import HotEvent from '../components/HotEvent'
 
 export default {
-  components: { VueMasonryWall },
+  components: { HotEvent, VueMasonryWall },
   data () {
     return {
       items: [
@@ -155,7 +173,16 @@ export default {
         { title: 'Item 8', content: '18 августа 15:30' },
         { title: 'Item 9', content: '18 августа 15:30' },
         { title: 'Item 10', content: '18 августа 15:30' }
-      ]
+      ],
+      settings: {
+        dots: true,
+        dotsClass: 'slick-dots custom-dot-class',
+        edgeFriction: 0.35,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
     }
   }
 }
