@@ -1,60 +1,75 @@
 <template>
   <div>
     <div class="page main d-flex">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <a
-            href="/"
-            class="navbar-brand pointer"
-          >
-            <img src="~/assets/logo.svg" height="40" class="d-inline-block align-top">
-          </a>
-          <div class="collapse navbar-collapse">
-            <div class="ml-auto">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  Мастерклассы
-                </li>
-                <li class="nav-item">
-                  Контакты
-                </li>
-              </ul>
+      <div class="video_top_content">
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container">
+            <a
+              href="/"
+              class="navbar-brand pointer"
+            >
+              <img src="~/assets/logo.svg" height="40" class="d-inline-block align-top">
+            </a>
+            <div class="collapse navbar-collapse">
+              <div class="ml-auto">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    Мастерклассы
+                  </li>
+                  <li class="nav-item">
+                    Контакты
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+        </nav>
+        <div class="my-auto container">
+          <b-carousel
+            indicators
+            :interval="3000"
+          >
+            <b-carousel-slide>
+              <template #default>
+                <div class="col-lg-4 text-center text-lg-left d-flex">
+                  <h1 class="my-auto fs-64">
+                    Территория современного
+                    творчества
+                  </h1>
+                </div>
+                <div class="ml-auto text-center my-auto col-lg-5">
+                  <img src="~assets/main/1.png" width="90%" />
+                </div>
+              </template>
+            </b-carousel-slide>
+            <b-carousel-slide>
+              <template #default>
+                <div class="col-lg-4 text-center text-lg-left d-flex">
+                  <h1 class="my-auto fs-64">
+                    Территория современного
+                    творчества 2
+                  </h1>
+                </div>
+                <div class="ml-auto text-center my-auto col-lg-5">
+                  <img src="~assets/main/1.png" width="90%" />
+                </div>
+              </template>
+            </b-carousel-slide>
+          </b-carousel>
         </div>
-      </nav>
-      <div class="my-auto container">
-        <b-carousel
-          indicators
-          :interval="3000"
-        >
-          <b-carousel-slide>
-            <template #default>
-              <div class="col-lg-4 d-flex">
-                <h1 class="my-auto fs-64">
-                  Территория современного
-                  творчества
-                </h1>
-              </div>
-              <div class="ml-auto text-center my-auto col-lg-5">
-                <img src="~assets/main/1.png" width="90%" />
-              </div>
-            </template>
-          </b-carousel-slide>
-          <b-carousel-slide>
-            <template #default>
-              <div class="col-lg-4 d-flex">
-                <h1 class="my-auto fs-64">
-                  Территория современного
-                  творчества 2
-                </h1>
-              </div>
-              <div class="ml-auto text-center my-auto col-lg-5">
-                <img src="~assets/main/1.png" width="90%" />
-              </div>
-            </template>
-          </b-carousel-slide>
-        </b-carousel>
+      </div>
+      <div class="video-bg">
+<!--        <video-->
+<!--          src="~assets/1.mp4"-->
+<!--          webkit-playsinline-->
+<!--          playsinline-->
+<!--          autoplay-->
+<!--          muted-->
+<!--          loop-->
+<!--          height="100%"-->
+<!--        >-->
+
+<!--        </video>-->
       </div>
     </div>
     <div class="page about_us d-flex flex-column">
